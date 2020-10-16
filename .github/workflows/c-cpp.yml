@@ -19,5 +19,6 @@ jobs:
     
     - name: make
       working-directory: ${{runner.working-directory}}
-      run: make
+      run: make ${{runner.working-directory}}/*.ino
+    
     
