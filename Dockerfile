@@ -10,13 +10,14 @@ RUN export uid=1000 gid=1000 && \
     echo "developer:x:${uid}:${gid}:Developer,,,:/home/developer:/bin/bash" >> /etc/passwd && \
     echo "developer:x:${uid}:" >> /etc/group && \
     echo "developer ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/developer && \
+    java -jar -Djava.awt.headless=true *.jar 
     chmod 0440 /etc/sudoers.d/developer && \
     chown ${uid}:${gid} -R /home/developer && \
     apt-get update \
 	&& apt-get install -y \
         software-properties-common \
 		wget \
-		openjdk-9-jre \
+		openjdk-8-jre \
 		xvfb \
         xz-utils \
 	sudo \
