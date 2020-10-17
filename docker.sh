@@ -5,7 +5,6 @@
 #    -v /dev/ttyACM0:/dev/ttyACM0 \
 #    -v /dev/ttyUSB0:/dev/ttyUSB0 \
 docker run \
-    -it \
     --rm \
     --network=host \
     --privileged \
