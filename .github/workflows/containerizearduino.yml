@@ -16,10 +16,11 @@ jobs:
       
     - name: Run docker file  
       working-directory: ${{runner.working-directory}}
+      shell: bash
       run: |
             sudo sudo apt-get install openjdk-11-jdk
             sudo apt install openjdk-11-jre
             sudo docker pull tombenke/darduino:latest
             sudo chmod +x docker.sh
-            sudo ./sh docker.sh
+            sudo ./docker.sh
  
