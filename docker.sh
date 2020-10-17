@@ -8,7 +8,7 @@ docker run \
     --rm \
     --network=host \
     --privileged \
-    -e DISPLAY=0.0 \
+    -e DISPLAY=:0 \
     -v /tmp/.X11-unix:/tmp/.X11-unix \
     -v /dev:/dev \
     -v $HOME/topics:/topics \
