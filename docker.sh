@@ -8,7 +8,7 @@ docker run \
     --rm \
     --network=host \
     --privileged \
-    -v /tmp/./.X11-DISPLAY:0/.X11-unix:/tmp/.X11-unix \
+    -v /tmp/./.X11-DISPLAY:0/tmp/.X11-unix \
     -v /dev:/dev \
     -v $HOME/topics:/topics \
     -v $HOME/topics/arduino:/home/developer/Arduino \
