@@ -10,7 +10,8 @@ RUN export uid=1000 gid=1000 && \
     echo "developer:x:${uid}:${gid}:Developer,,,:/home/developer:/bin/bash" >> /etc/passwd && \
     echo "developer:x:${uid}:" >> /etc/group && \
     echo "developer ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/developer && \
-    java -jar -Djava.awt.headless=true *.jar 
+    java -jar -Djava.awt.headless=true *.jar \
+    setenv DISPLAY :0.0 \
     chmod 0440 /etc/sudoers.d/developer && \
     chown ${uid}:${gid} -R /home/developer && \
     apt-get update \
@@ -37,6 +38,6 @@ RUN (wget -q -O- https://downloads.arduino.cc/arduino-${ARDUINO_IDE_VERSION}-lin
 	&& ln -s /usr/local/share/arduino-${ARDUINO_IDE_VERSION} /usr/local/share/arduino \
 	&& ln -s /usr/local/share/arduino-${ARDUINO_IDE_VERSION}/arduino /usr/local/bin/arduino)
 
-ENV DISPLAY :1.0
+
 
 USER developer
