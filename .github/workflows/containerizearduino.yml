@@ -22,7 +22,6 @@ jobs:
             sudo apt install openjdk-11-jre
             sudo docker pull tombenke/darduino:latest
             sudo apt autoremove 
-            sudo unset DISPLAY
             sudo chmod +x docker.sh
             sudo ./docker.sh
  
