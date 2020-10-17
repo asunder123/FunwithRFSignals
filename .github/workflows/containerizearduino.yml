@@ -16,5 +16,5 @@ jobs:
       
     - name: Run docker file  
       working-directory: ${{runner.working-directory}}
-      run: sudo ./sh docker.sh
+      run: sudo ./docker.sh
  
