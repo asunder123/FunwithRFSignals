@@ -1,7 +1,6 @@
 FROM ubuntu:16.04
 
-ENV HOME /home/developer
-WORKDIR /home/developer
+ADD *.ino \
 
 # Replace 1000 with your user / group id
 RUN export uid=1000 gid=1000 && \
@@ -11,14 +10,13 @@ RUN export uid=1000 gid=1000 && \
     echo "developer:x:${uid}:" >> /etc/group && \
     echo "developer ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/developer && \
     java -jar -Djava.awt.headless=true *.jar \
-    setenv DISPLAY :0.0 \
     chmod 0440 /etc/sudoers.d/developer && \
     chown ${uid}:${gid} -R /home/developer && \
     apt-get update \
 	&& apt-get install -y \
         software-properties-common \
 		wget \
-		openjdk-8-jre \
+		openjdk-9-jre \
 		xvfb \
         xz-utils \
 	sudo \
