@@ -21,6 +21,5 @@ jobs:
             sudo apt install openjdk-11-jre
             sudo docker pull tombenke/darduino:latest
             sudo chmod +x docker.sh
-            sudo java -Djava.awt.headless=true -jar *.jar
             sudo ./sh docker.sh
  
