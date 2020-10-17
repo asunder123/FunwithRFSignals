@@ -17,6 +17,8 @@ jobs:
     - name: Run docker file  
       working-directory: ${{runner.working-directory}}
       run: |
+            sudo sudo apt-get install openjdk-11-jdk
+            sudo apt-get install openjre-11-jdk
             sudo docker pull tombenke/darduino:latest
             sudo chmod +x docker.sh
             sudo ./docker.sh
