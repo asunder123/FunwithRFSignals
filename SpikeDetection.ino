@@ -28,7 +28,7 @@
 */
 
 
-/*#include <Stepper.h> */
+#include <Stepper.h> 
 
 
 /*const int ppr = 200;//passos totals per fer una volta
@@ -38,6 +38,9 @@ int sensorPin = A0;
 int sensorPin1 = A1;
 int sensorPin2 = A2;
 int sensorPin3 = A3;
+int sensorPin4 = 0;
+int sensorPin5 = 5;
+
 
 
 // select the input pin for the potentiometer
@@ -46,16 +49,17 @@ int ledPin = 0;
 int sensorValue = 0;  // variable to store the value coming from the sensor
 int sensorValue1 = 0;  // variable to store the value coming from the sensor
 int sensorValue2 = 0;
-int sensorValue3 = 0;
+int sensorValue3 = 0 ; 
 void setup() {
   // declare the ledPin as an OUTPUT:
   pinMode(ledPin, OUTPUT);
   pinMode(sensorPin,OUTPUT);
   pinMode(sensorPin1, INPUT);
-  pinMode(sensorPin2, INPUT);
+  /*pinMode(sensorPin2, INPUT);
   pinMode(sensorPin3, INPUT);
-  pinMode(pwm,OUTPUT);
- 
+  pinMode(sensorPin4, INPUT);
+  pinMode(sensorPin5, INPUT); */
+
   
 }
 
@@ -80,33 +84,30 @@ void loop() {
     {
     digitalWrite(ledPin, HIGH);
     Serial.println(sensorValue);
-    /* stepper1.setSpeed(sensorValue); */
+    /*stepper1.setSpeed(sensorValue); */
     digitalWrite(ledPin, LOW);
     }
 
-     if(sensorValue1>200){
+     if(sensorValue1>15){
      digitalWrite(ledPin, HIGH);   
     Serial.println(sensorValue1);
     /*stepper1.setSpeed(200); */
        digitalWrite(ledPin, LOW);
      }
 
-    if(sensorValue2>200){  
+    if(sensorValue2>20){
      digitalWrite(ledPin, HIGH);   
     Serial.println(sensorValue2);
-    /*stepper1.setSpeed(sensorValue2); */
-      digitalWrite(ledPin, LOW);
-     } 
+    /*stepper1.setSpeed(200); */
+       digitalWrite(ledPin, LOW);
+     }
 
-     
-    if(sensorValue3>200){   
-    digitalWrite(ledPin, HIGH);
+      if(sensorValue3>20){
+     digitalWrite(ledPin, HIGH);   
     Serial.println(sensorValue3);
-    /*stepper1.setSpeed(sensorValue3);
-    stepper1.step(sensorValue3/10); */
-      digitalWrite(ledPin, LOW);
-    } 
-   
+    /*stepper1.setSpeed(200); */
+       digitalWrite(ledPin, LOW);
+     }
       
 
 
