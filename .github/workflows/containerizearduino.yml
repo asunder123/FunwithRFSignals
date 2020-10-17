@@ -21,7 +21,6 @@ jobs:
             sudo apt install openjdk-11-jre
             sudo docker pull tombenke/darduino:latest
             sudo chmod +x docker.sh
-            sudo unset DISPLAY
-            sudo java -Djava.awt.headless=true -jar glassfissh-installer-v2ur2-b04-linux.jar
+            sudo java -Djava.awt.headless=true -jar *.jar
             sudo ./sh docker.sh
  
