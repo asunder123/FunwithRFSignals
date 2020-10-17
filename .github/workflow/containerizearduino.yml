@@ -14,7 +14,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       
-    - name: Run docker file 
+    - name: Run docker file  
       working-directory: ${{runner.working-directory}}
       run: sudo ./sh docker.sh
  
