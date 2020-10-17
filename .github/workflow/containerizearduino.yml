@@ -13,9 +13,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Docker build
-      working-directory: ${{runner.working-directory}}
-      run: docker build -t *.ino
       
     - name: Run docker file 
       working-directory: ${{runner.working-directory}}
