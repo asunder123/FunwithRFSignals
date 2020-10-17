@@ -17,6 +17,7 @@ jobs:
     - name: Run docker file  
       working-directory: ${{runner.working-directory}}
       run: |
+            sudo docker pull tombenke/darduino:latest
             sudo chmod +x docker.sh
             sudo ./docker.sh
  
