@@ -21,6 +21,7 @@ jobs:
             sudo sudo apt-get install openjdk-11-jdk
             sudo apt install openjdk-11-jre
             sudo docker pull tombenke/darduino:latest
+            sudo export DISPLAY=:0
             sudo chmod +x docker.sh
             sudo ./docker.sh
  
