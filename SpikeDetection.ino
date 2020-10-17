@@ -39,7 +39,7 @@ int sensorPin1 = A1;
 int sensorPin2 = A2;
 int sensorPin3 = A3;
 int sensorPin4 = 0;
-int sensorPin5 = 5;
+int sensorPin5 = 0;
 
 
 
