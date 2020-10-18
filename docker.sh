@@ -8,8 +8,6 @@ docker run \
     --network=host \
     --privileged \
     -v /dev:/dev \
-    -v $HOME/topics:/topics \
-    -v $HOME/topics/arduino:/home/developer/Arduino \
     --name arduino \
     tombenke/darduino:latest \
     arduino \
