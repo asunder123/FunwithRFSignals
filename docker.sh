@@ -4,4 +4,4 @@
 
 #    -v /dev/ttyACM0:/dev/ttyACM0 \
 #    -v /dev/ttyUSB0:/dev/ttyUSB0 \
-docker run  -p 8085:8085 --network=host --privileged --name arduino tombenke/darduino:latest arduino 
+docker run --privileged -v /dev/bus/usb:/dev/bus/usb SpikeDetection.ino ino upload -m mega2560
