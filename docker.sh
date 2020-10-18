@@ -4,10 +4,4 @@
 
 #    -v /dev/ttyACM0:/dev/ttyACM0 \
 #    -v /dev/ttyUSB0:/dev/ttyUSB0 \
-docker run \
-    --network=host \
-    --privileged \
-    -v /dev:/dev \
-    --name arduino \
-    tombenke/darduino:latest \
-    arduino \
+docker run -it -p 8085:8085 --network=host --privileged --name arduino tombenke/darduino:latest arduino 
