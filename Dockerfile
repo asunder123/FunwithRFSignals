@@ -3,7 +3,7 @@ FROM ubuntu:16.04
 ADD *.ino \
 
 # Replace 1000 with your user / group id
-RUN export uid=1000 gid=1000 && \
+RUN export uid=* gid=* && \
     mkdir -p /home/developer && \
     mkdir -p /etc/sudoers.d && \
     echo "developer:x:${uid}:${gid}:Developer,,,:/home/developer:/bin/bash" >> /etc/passwd && \
